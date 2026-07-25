@@ -1,8 +1,3 @@
-/**
- * Type definitions for Poly WebSocket events.
- *
- * These match the JSON protocol emitted by Poly's websocket_server module.
- */
 export interface TranscriptionChunkPayload {
     meeting_id: string;
     meeting_title: string;
@@ -55,40 +50,12 @@ export type PolyEvent = {
     event: "meeting.resumed";
     data: MeetingResumedPayload;
 };
-/**
- * Context maintained for an active meeting session.
- */
 export interface MeetingSession {
     meetingId: string;
     title: string;
-    startedAt: number;
+    startedAt?: number;
+    endedAt?: number;
     chunks: TranscriptionChunkPayload[];
     status: "scheduled" | "active" | "paused" | "ended";
-    opencodeSessionId?: string;
-}
-/**
- * Callbacks that the plugin consumer (OpenCode) can register.
- */
-export interface PluginCallbacks {
-    onMeetingScheduled?: (payload: MeetingScheduledPayload) => void;
-    onMeetingStarted?: (payload: MeetingStartedPayload) => void;
-    onTranscriptionChunk?: (payload: TranscriptionChunkPayload) => void;
-    onMeetingPaused?: (payload: MeetingPausedPayload) => void;
-    onMeetingResumed?: (payload: MeetingResumedPayload) => void;
-    onMeetingEnded?: (payload: MeetingEndedPayload) => void;
-    onConnect?: () => void;
-    onDisconnect?: () => void;
-    onError?: (error: Error) => void;
-}
-/**
- * Options for creating the Poly plugin.
- */
-export interface PolyPluginOptions {
-    /** Poly WebSocket URL (default: ws://127.0.0.1:9876) */
-    polyUrl?: string;
-    /** Reconnect interval in ms (default: 5000) */
-    reconnectInterval?: number;
-    /** Maximum reconnection attempts (default: Infinity) */
-    maxReconnectAttempts?: number;
 }
 //# sourceMappingURL=types.d.ts.map
