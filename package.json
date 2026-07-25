@@ -1,0 +1,23 @@
+{
+  "name": "opencode-poly-plugin",
+  "version": "1.0.0",
+  "description": "OpenCode plugin for Poly - connect to live meeting transcription and manage session context",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest"
+  },
+  "keywords": ["opencode", "poly", "meeting", "transcription", "agent"],
+  "author": "astra-hq",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
+    "typescript": "^5.3.0"
+  }
+}
