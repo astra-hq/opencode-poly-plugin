@@ -1,5 +1,5 @@
 {
-  "name": "opencode-poly-plugin",
+  "name": "opencode-poly",
   "version": "1.0.0",
   "description": "OpenCode plugin for Poly — live meeting transcription and session management",
   "main": "dist/index.js",

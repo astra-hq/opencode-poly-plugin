@@ -1,4 +1,4 @@
-# Poly OpenCode Plugin
+# opencode-poly
 
 Connect OpenCode to [Poly](https://github.com/astra-hq/poly) live meeting transcription.
 
@@ -17,7 +17,7 @@ Add to your OpenCode config (`~/.config/opencode/opencode.json` or project `open
 
 ```json
 {
-  "plugin": ["opencode-poly-plugin"]
+  "plugin": ["opencode-poly"]
 }
 ```
 
@@ -29,7 +29,7 @@ Clone this repo and add to your OpenCode config:
 
 ```json
 {
-  "plugin": ["/path/to/opencode-poly-plugin"]
+  "plugin": ["/path/to/opencode-poly"]
 }
 ```
 
